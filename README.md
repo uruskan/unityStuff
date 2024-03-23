@@ -1,1 +1,1 @@
-# unityStuff
+Repo where I store my old or fragmented code related to Unity game engine.
