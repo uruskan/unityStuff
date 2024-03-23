@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Can : MonoBehaviour {
+<<<<<<< HEAD
 	public int normalcan = 100;
 	public int simdikican;
 	public Slider HPSlider;
@@ -38,4 +39,37 @@ public class Can : MonoBehaviour {
 	void Update () {
 		
 	}
+=======
+    public int hp = 100;
+    public int simdikiCan;
+    public Slider hpslider;
+    public GameObject rpgci;
+
+
+    // Use this for initialization
+    void Start () {
+        
+        
+
+		
+	}
+    public void hasarAl(int saldırıGücü) {
+        simdikiCan = hp - saldırıGücü;
+        hp = simdikiCan;
+        hpslider.value = simdikiCan;
+        
+        if (simdikiCan <= 0) {
+            Debug.Log("Öldüm Çıktım !");
+            Destroy(gameObject);
+            rpgci.SetActive(false);
+
+        }
+        if (simdikiCan > 0) {
+            Debug.Log(simdikiCan +"Canım Kaldı.");
+        }
+    }
+    // Update is called once per frame
+	void Update () {
+    }
+>>>>>>> g3/master
 }
